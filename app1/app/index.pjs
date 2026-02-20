@@ -1,0 +1,13 @@
+
+import { createComponent } from 'unreactpjs';
+import { RootLayout } from './layout';
+import { HomePage } from './page';
+
+const App = createComponent(() => {
+    return RootLayout({
+        title: 'UnReact.js - Modern Framework',
+        children: HomePage({})
+    });
+});
+
+document.getElementById('root')?.appendChild(App({}));

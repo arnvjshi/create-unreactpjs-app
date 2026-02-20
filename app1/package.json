@@ -1,0 +1,17 @@
+{
+  "name": "app1",
+  "version": "0.1.0",
+  "main": "app/index.pjs",
+  "scripts": {
+    "start": "npx esbuild app/index.pjs --bundle --servedir=public --outfile=public/bundle.js --loader:.pjs=ts --resolve-extensions=.pjs,.ts,.js",
+    "dev": "npx esbuild app/index.pjs --bundle --servedir=public --outfile=public/bundle.js --watch --loader:.pjs=ts --resolve-extensions=.pjs,.ts,.js",
+    "arnv": "npx esbuild app/index.pjs --bundle --servedir=public --outfile=public/bundle.js --watch --loader:.pjs=ts --resolve-extensions=.pjs,.ts,.js",
+    "build": "npx esbuild app/index.pjs --bundle --outfile=dist/bundle.js --loader:.pjs=ts --resolve-extensions=.pjs,.ts,.js"
+  },
+  "dependencies": {
+    "unreactpjs": "latest"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0"
+  }
+}
